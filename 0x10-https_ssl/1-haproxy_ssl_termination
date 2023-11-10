@@ -34,6 +34,7 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 frontend we0102
+        bind *:80
         bind *:443 ssl crt /etc/letsencrypt/live/www.nzembi.tech/www.nzembi.tech.pem
         mode http
         http-request redirect scheme https unless { ssl_fc }
