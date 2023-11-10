@@ -36,7 +36,6 @@ defaults
 frontend we0102
         bind *:443 ssl crt /etc/letsencrypt/live/www.nzembi.tech/www.nzembi.tech.pem
         mode http
-        http-request redirect scheme https code 301 unless { ssl_fc }
         default_backend web_backend
         
 backend web_backend
