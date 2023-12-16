@@ -8,7 +8,7 @@ import requests
 def number_of_subscribers(subreddit):
     """ the function """
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    headers = {'User-Agent': 'My-User-Agent'}
     response = requests.get(url, headers=headers).json()
 
     if response.get("error") == 404:
