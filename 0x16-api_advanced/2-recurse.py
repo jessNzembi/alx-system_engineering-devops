@@ -6,7 +6,7 @@ hot articles for a given subreddit recrusively
 import requests
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, hot_list=[], count=0, after=None):
     """
     Returns a list containing the titles of all hot articles
     """
